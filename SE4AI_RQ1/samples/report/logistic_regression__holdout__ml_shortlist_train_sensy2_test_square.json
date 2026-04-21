@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-21T09:35:58.021265",
+    "model_name": "logistic_regression",
+    "evaluation_mode": "holdout",
+    "experiment_tag": "ml_shortlist_train_sensy2_test_square",
+    "train_path": "data/dataset_SensY2.0.json",
+    "test_path": "data/dataset_SQUARE.json",
+    "random_state": 42,
+    "dataset_info": {
+      "train_rows": 14751,
+      "test_rows": 37115
+    }
+  },
+  "metrics": {
+    "accuracy": [
+      0.7893843459517715,
+      0.0
+    ],
+    "precision_macro": [
+      0.5254842381620514,
+      0.0
+    ],
+    "recall_macro": [
+      0.6178645657564423,
+      0.0
+    ],
+    "f1_macro": [
+      0.5055666661681909,
+      0.0
+    ],
+    "precision_micro": [
+      0.7893843459517715,
+      0.0
+    ],
+    "recall_micro": [
+      0.7893843459517715,
+      0.0
+    ],
+    "f1_micro": [
+      0.7893843459517715,
+      0.0
+    ],
+    "precision_weighted": [
+      0.9409333344778772,
+      0.0
+    ],
+    "recall_weighted": [
+      0.7893843459517715,
+      0.0
+    ],
+    "f1_weighted": [
+      0.8526982970642324,
+      0.0
+    ],
+    "precision_per_class": {
+      "0": [
+        0.0771548336389835,
+        0.0
+      ],
+      "1": [
+        0.9738136426851193,
+        0.0
+      ]
+    },
+    "recall_per_class": {
+      "0": [
+        0.4327700220426157,
+        0.0
+      ],
+      "1": [
+        0.802959109470269,
+        0.0
+      ]
+    },
+    "f1_per_class": {
+      "0": [
+        0.13096164535853252,
+        0.0
+      ],
+      "1": [
+        0.8801716869778493,
+        0.0
+      ]
+    },
+    "roc_auc": [
+      0.7104151102416435,
+      0.0
+    ],
+    "pr_auc": [
+      0.9842466160796737,
+      0.0
+    ]
+  }
+}

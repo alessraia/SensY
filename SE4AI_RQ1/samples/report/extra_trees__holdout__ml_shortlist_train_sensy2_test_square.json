@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-21T09:38:52.672275",
+    "model_name": "extra_trees",
+    "evaluation_mode": "holdout",
+    "experiment_tag": "ml_shortlist_train_sensy2_test_square",
+    "train_path": "data/dataset_SensY2.0.json",
+    "test_path": "data/dataset_SQUARE.json",
+    "random_state": 42,
+    "dataset_info": {
+      "train_rows": 14751,
+      "test_rows": 37115
+    }
+  },
+  "metrics": {
+    "accuracy": [
+      0.6315505860164354,
+      0.0
+    ],
+    "precision_macro": [
+      0.5150336562534086,
+      0.0
+    ],
+    "recall_macro": [
+      0.5995543081002082,
+      0.0
+    ],
+    "f1_macro": [
+      0.43469242453262535,
+      0.0
+    ],
+    "precision_micro": [
+      0.6315505860164354,
+      0.0
+    ],
+    "recall_micro": [
+      0.6315505860164354,
+      0.0
+    ],
+    "f1_micro": [
+      0.6315505860164354,
+      0.0
+    ],
+    "precision_weighted": [
+      0.9408509727277239,
+      0.0
+    ],
+    "recall_weighted": [
+      0.6315505860164354,
+      0.0
+    ],
+    "f1_weighted": [
+      0.7438213966773007,
+      0.0
+    ],
+    "precision_per_class": {
+      "0": [
+        0.05551544903263067,
+        0.0
+      ],
+      "1": [
+        0.9745518634741864,
+        0.0
+      ]
+    },
+    "recall_per_class": {
+      "0": [
+        0.565025716385011,
+        0.0
+      ],
+      "1": [
+        0.6340828998154052,
+        0.0
+      ]
+    },
+    "f1_per_class": {
+      "0": [
+        0.10109774534937224,
+        0.0
+      ],
+      "1": [
+        0.7682871037158785,
+        0.0
+      ]
+    },
+    "roc_auc": [
+      0.6542040974169274,
+      0.0
+    ],
+    "pr_auc": [
+      0.9791502330379267,
+      0.0
+    ]
+  }
+}

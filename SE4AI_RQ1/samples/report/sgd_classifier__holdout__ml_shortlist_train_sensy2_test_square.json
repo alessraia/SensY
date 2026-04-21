@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-21T09:38:50.633258",
+    "model_name": "sgd_classifier",
+    "evaluation_mode": "holdout",
+    "experiment_tag": "ml_shortlist_train_sensy2_test_square",
+    "train_path": "data/dataset_SensY2.0.json",
+    "test_path": "data/dataset_SQUARE.json",
+    "random_state": 42,
+    "dataset_info": {
+      "train_rows": 14751,
+      "test_rows": 37115
+    }
+  },
+  "metrics": {
+    "accuracy": [
+      0.64849791189546,
+      0.0
+    ],
+    "precision_macro": [
+      0.523458446125763,
+      0.0
+    ],
+    "recall_macro": [
+      0.65358476407299,
+      0.0
+    ],
+    "f1_macro": [
+      0.4506114386650624,
+      0.0
+    ],
+    "precision_micro": [
+      0.64849791189546,
+      0.0
+    ],
+    "recall_micro": [
+      0.64849791189546,
+      0.0
+    ],
+    "f1_micro": [
+      0.64849791189546,
+      0.0
+    ],
+    "precision_weighted": [
+      0.9468592875373207,
+      0.0
+    ],
+    "recall_weighted": [
+      0.64849791189546,
+      0.0
+    ],
+    "f1_weighted": [
+      0.7561517068497118,
+      0.0
+    ],
+    "precision_per_class": {
+      "0": [
+        0.06654796349877587,
+        0.0
+      ],
+      "1": [
+        0.9803689287527501,
+        0.0
+      ]
+    },
+    "recall_per_class": {
+      "0": [
+        0.6590742101396032,
+        0.0
+      ],
+      "1": [
+        0.6480953180063769,
+        0.0
+      ]
+    },
+    "f1_per_class": {
+      "0": [
+        0.12088948787061994,
+        0.0
+      ],
+      "1": [
+        0.7803333894595049,
+        0.0
+      ]
+    },
+    "roc_auc": [
+      0.7102835269516814,
+      0.0
+    ],
+    "pr_auc": [
+      0.9840253598301669,
+      0.0
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-21T09:38:49.246549",
+    "model_name": "ridge_classifier",
+    "evaluation_mode": "holdout",
+    "experiment_tag": "ml_shortlist_train_sensy2_test_square",
+    "train_path": "data/dataset_SensY2.0.json",
+    "test_path": "data/dataset_SQUARE.json",
+    "random_state": 42,
+    "dataset_info": {
+      "train_rows": 14751,
+      "test_rows": 37115
+    }
+  },
+  "metrics": {
+    "accuracy": [
+      0.7809510979388388,
+      0.0
+    ],
+    "precision_macro": [
+      0.5265977583493991,
+      0.0
+    ],
+    "recall_macro": [
+      0.6276231323053849,
+      0.0
+    ],
+    "f1_macro": [
+      0.5043095775517368,
+      0.0
+    ],
+    "precision_micro": [
+      0.7809510979388388,
+      0.0
+    ],
+    "recall_micro": [
+      0.7809510979388388,
+      0.0
+    ],
+    "f1_micro": [
+      0.7809510979388388,
+      0.0
+    ],
+    "precision_weighted": [
+      0.9419614356913865,
+      0.0
+    ],
+    "recall_weighted": [
+      0.7809510979388388,
+      0.0
+    ],
+    "f1_weighted": [
+      0.84746000171135,
+      0.0
+    ],
+    "precision_per_class": {
+      "0": [
+        0.07836053320044849,
+        0.0
+      ],
+      "1": [
+        0.9748349834983498,
+        0.0
+      ]
+    },
+    "recall_per_class": {
+      "0": [
+        0.46216017634092577,
+        0.0
+      ],
+      "1": [
+        0.793086088269844,
+        0.0
+      ]
+    },
+    "f1_per_class": {
+      "0": [
+        0.134000852151683,
+        0.0
+      ],
+      "1": [
+        0.8746183029517905,
+        0.0
+      ]
+    },
+    "roc_auc": [
+      0.7141354053087969,
+      0.0
+    ],
+    "pr_auc": [
+      0.9843557880100207,
+      0.0
+    ]
+  }
+}
