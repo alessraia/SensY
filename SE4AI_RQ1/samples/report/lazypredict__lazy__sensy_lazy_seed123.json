@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-20T12:30:26.679597",
+    "evaluation_mode": "lazy",
+    "experiment_tag": "sensy_lazy_seed123",
+    "train_path": "data/dataset_SensY2.0.json",
+    "random_state": 123,
+    "lazy_test_size": 0.2,
+    "rows": 14751
+  },
+  "leaderboard": [
+    {
+      "Model": "SVC",
+      "Accuracy": 0.9335818366655371,
+      "Balanced Accuracy": 0.9043812855129488,
+      "ROC AUC": 0.9688006853348129,
+      "F1 Score": 0.9321279050210827,
+      "Precision": 0.9351105635391692,
+      "Recall": 0.9335818366655371,
+      "Time Taken": 16.516231775283813
+    },
+    {
+      "Model": "LinearSVC",
+      "Accuracy": 0.9183327685530329,
+      "Balanced Accuracy": 0.8998803214951523,
+      "ROC AUC": 0.9586678698289,
+      "F1 Score": 0.9178507683175976,
+      "Precision": 0.9177370677669837,
+      "Recall": 0.9183327685530329,
+      "Time Taken": 2.2577569484710693
+    },
+    {
+      "Model": "LogisticRegression",
+      "Accuracy": 0.9159606912910878,
+      "Balanced Accuracy": 0.8969914566978511,
+      "ROC AUC": 0.958521726006373,
+      "F1 Score": 0.915451367077534,
+      "Precision": 0.9153282946025553,
+      "Recall": 0.9159606912910878,
+      "Time Taken": 0.5073339939117432
+    },
+    {
+      "Model": "CalibratedClassifierCV",
+      "Accuracy": 0.9196882412741444,
+      "Balanced Accuracy": 0.8950942441654072,
+      "ROC AUC": 0.9589537802889715,
+      "F1 Score": 0.9186256247706698,
+      "Precision": 0.9192782490530026,
+      "Recall": 0.9196882412741444,
+      "Time Taken": 8.29419469833374
+    },
+    {
+      "Model": "LinearDiscriminantAnalysis",
+      "Accuracy": 0.9213825821755337,
+      "Balanced Accuracy": 0.8928664808780109,
+      "ROC AUC": 0.9578106698807679,
+      "F1 Score": 0.9199305582160228,
+      "Precision": 0.921668846298068,
+      "Recall": 0.9213825821755337,
+      "Time Taken": 1.005335807800293
+    },
+    {
+      "Model": "RidgeClassifier",
+      "Accuracy": 0.9217214503558115,
+      "Balanced Accuracy": 0.8928252948916622,
+      "ROC AUC": 0.9578202356582424,
+      "F1 Score": 0.9202317691527774,
+      "Precision": 0.9221141488193538,
+      "Recall": 0.9217214503558115,
+      "Time Taken": 0.3382854461669922
+    },
+    {
+      "Model": "RidgeClassifierCV",
+      "Accuracy": 0.9217214503558115,
+      "Balanced Accuracy": 0.8928252948916622,
+      "ROC AUC": 0.9579254592104621,
+      "F1 Score": 0.9202317691527774,
+      "Precision": 0.9221141488193538,
+      "Recall": 0.9217214503558115,
+      "Time Taken": 1.1235692501068115
+    },
+    {
+      "Model": "SGDClassifier",
+      "Accuracy": 0.9068112504235852,
+      "Balanced Accuracy": 0.892615644935346,
+      "ROC AUC": 0.953560807521677,
+      "F1 Score": 0.9068514782126514,
+      "Precision": 0.9068938015426743,
+      "Recall": 0.9068112504235852,
+      "Time Taken": 1.253389835357666
+    },
+    {
+      "Model": "KNeighborsClassifier",
+      "Accuracy": 0.9213825821755337,
+      "Balanced Accuracy": 0.8891116475032258,
+      "ROC AUC": 0.9354373792320594,
+      "F1 Score": 0.9195387021100009,
+      "Precision": 0.9226252515852247,
+      "Recall": 0.9213825821755337,
+      "Time Taken": 0.7514762878417969
+    },
+    {
+      "Model": "PassiveAggressiveClassifier",
+      "Accuracy": 0.9030837004405287,
+      "Balanced Accuracy": 0.8861366907086541,
+      "ROC AUC": 0.9491175038847686,
+      "F1 Score": 0.9029132964517024,
+      "Precision": 0.9027764818649375,
+      "Recall": 0.9030837004405287,
+      "Time Taken": 0.4940042495727539
+    },
+    {
+      "Model": "Perceptron",
+      "Accuracy": 0.8993561504574721,
+      "Balanced Accuracy": 0.8834125698567472,
+      "ROC AUC": 0.947262274486796,
+      "F1 Score": 0.8993415982315962,
+      "Precision": 0.8993272766945237,
+      "Recall": 0.8993561504574721,
+      "Time Taken": 0.38617873191833496
+    },
+    {
+      "Model": "RandomForestClassifier",
+      "Accuracy": 0.9125720094883091,
+      "Balanced Accuracy": 0.8702529829282759,
+      "ROC AUC": 0.9421509607229178,
+      "F1 Score": 0.909419997461701,
+      "Precision": 0.916729925171459,
+      "Recall": 0.9125720094883091,
+      "Time Taken": 17.10233783721924
+    },
+    {
+      "Model": "ExtraTreesClassifier",
+      "Accuracy": 0.9115554049474754,
+      "Balanced Accuracy": 0.8680658741951461,
+      "ROC AUC": 0.9486253977769132,
+      "F1 Score": 0.9082275203721913,
+      "Precision": 0.9161577795823534,
+      "Recall": 0.9115554049474754,
+      "Time Taken": 3.3760604858398438
+    },
+    {
+      "Model": "AdaBoostClassifier",
+      "Accuracy": 0.891562182311081,
+      "Balanced Accuracy": 0.8612531806210102,
+      "ROC AUC": 0.9290965973466659,
+      "F1 Score": 0.8899549870912392,
+      "Precision": 0.8903734399812214,
+      "Recall": 0.891562182311081,
+      "Time Taken": 28.408151865005493
+    },
+    {
+      "Model": "BaggingClassifier",
+      "Accuracy": 0.891562182311081,
+      "Balanced Accuracy": 0.8485445138140455,
+      "ROC AUC": 0.9157746579171688,
+      "F1 Score": 0.8880805634513285,
+      "Precision": 0.8928188844643639,
+      "Recall": 0.891562182311081,
+      "Time Taken": 78.8082377910614
+    },
+    {
+      "Model": "NuSVC",
+      "Accuracy": 0.8976618095560827,
+      "Balanced Accuracy": 0.8480919993962932,
+      "ROC AUC": 0.9372957972225233,
+      "F1 Score": 0.8931679190722347,
+      "Precision": 0.9030560610811776,
+      "Recall": 0.8976618095560827,
+      "Time Taken": 43.974024534225464
+    },
+    {
+      "Model": "BernoulliNB",
+      "Accuracy": 0.8132836326668926,
+      "Balanced Accuracy": 0.8104009761344481,
+      "ROC AUC": 0.8598446198878891,
+      "F1 Score": 0.8171979829299582,
+      "Precision": 0.8274802478605363,
+      "Recall": 0.8132836326668926,
+      "Time Taken": 0.4041116237640381
+    },
+    {
+      "Model": "NearestCentroid",
+      "Accuracy": 0.8000677736360555,
+      "Balanced Accuracy": 0.8044975628524723,
+      "ROC AUC": 0.8490581429212184,
+      "F1 Score": 0.8052649005205001,
+      "Precision": 0.8217943827895815,
+      "Recall": 0.8000677736360555,
+      "Time Taken": 0.3146212100982666
+    },
+    {
+      "Model": "GaussianNB",
+      "Accuracy": 0.7739749237546595,
+      "Balanced Accuracy": 0.7888947169273872,
+      "ROC AUC": 0.8377173822931082,
+      "F1 Score": 0.7811058893980394,
+      "Precision": 0.8096147425657828,
+      "Recall": 0.7739749237546595,
+      "Time Taken": 0.40129542350769043
+    },
+    {
+      "Model": "DecisionTreeClassifier",
+      "Accuracy": 0.8115892917655032,
+      "Balanced Accuracy": 0.7863449057983491,
+      "ROC AUC": 0.7863449057983491,
+      "F1 Score": 0.8123763269293514,
+      "Precision": 0.8133413746665487,
+      "Recall": 0.8115892917655032,
+      "Time Taken": 14.094492673873901
+    },
+    {
+      "Model": "ExtraTreeClassifier",
+      "Accuracy": 0.7946458827516096,
+      "Balanced Accuracy": 0.7606762048096729,
+      "ROC AUC": 0.7606762048096728,
+      "F1 Score": 0.7942848169571036,
+      "Precision": 0.7939518090753429,
+      "Recall": 0.7946458827516096,
+      "Time Taken": 0.27729201316833496
+    },
+    {
+      "Model": "LabelPropagation",
+      "Accuracy": 0.690274483226025,
+      "Balanced Accuracy": 0.5102343190335589,
+      "ROC AUC": NaN,
+      "F1 Score": 0.5710354687823431,
+      "Precision": 0.7582577360553336,
+      "Recall": 0.690274483226025,
+      "Time Taken": 3.7904491424560547
+    },
+    {
+      "Model": "LabelSpreading",
+      "Accuracy": 0.690274483226025,
+      "Balanced Accuracy": 0.5102343190335589,
+      "ROC AUC": NaN,
+      "F1 Score": 0.5710354687823431,
+      "Precision": 0.7582577360553336,
+      "Recall": 0.690274483226025,
+      "Time Taken": 4.349595546722412
+    },
+    {
+      "Model": "DummyClassifier",
+      "Accuracy": 0.6841748559810233,
+      "Balanced Accuracy": 0.5,
+      "ROC AUC": 0.5,
+      "F1 Score": 0.5558748628674793,
+      "Precision": 0.46809523355665406,
+      "Recall": 0.6841748559810233,
+      "Time Taken": 0.2255241870880127
+    }
+  ]
+}
