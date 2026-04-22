@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-21T22:27:54.310999",
+    "model_name": "textcnn",
+    "evaluation_mode": "holdout",
+    "experiment_tag": "dl_train_sensy2_test_square",
+    "train_path": "data/dataset_SENSY2.0.json",
+    "test_path": "data/dataset_SQUARE.json",
+    "random_state": 42,
+    "dataset_info": {
+      "train_rows": 14751,
+      "test_rows": 37115,
+      "input_type": "text"
+    }
+  },
+  "metrics": {
+    "accuracy": [
+      0.4960528088373973,
+      0.0
+    ],
+    "precision_macro": [
+      0.5079799655850541,
+      0.0
+    ],
+    "recall_macro": [
+      0.5564377335254043,
+      0.0
+    ],
+    "f1_macro": [
+      0.36775951041030064,
+      0.0
+    ],
+    "precision_micro": [
+      0.4960528088373973,
+      0.0
+    ],
+    "recall_micro": [
+      0.4960528088373973,
+      0.0
+    ],
+    "f1_micro": [
+      0.4960528088373973,
+      0.0
+    ],
+    "precision_weighted": [
+      0.9375199677024995,
+      0.0
+    ],
+    "recall_weighted": [
+      0.4960528088373973,
+      0.0
+    ],
+    "f1_weighted": [
+      0.6316743027306031,
+      0.0
+    ],
+    "precision_per_class": {
+      "0": [
+        0.044444444444444446,
+        0.0
+      ],
+      "1": [
+        0.9715154867256637,
+        0.0
+      ]
+    },
+    "recall_per_class": {
+      "0": [
+        0.6216017634092579,
+        0.0
+      ],
+      "1": [
+        0.4912737036415506,
+        0.0
+      ]
+    },
+    "f1_per_class": {
+      "0": [
+        0.08295744263581094,
+        0.0
+      ],
+      "1": [
+        0.6525615781847903,
+        0.0
+      ]
+    },
+    "roc_auc": [
+      0.5842089900219053,
+      0.0
+    ],
+    "pr_auc": [
+      0.9735390958553081,
+      0.0
+    ]
+  }
+}
