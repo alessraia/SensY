@@ -1,4 +1,4 @@
-from experiment_runner import run_lazy
+from experiment_runner_ML import run_lazy
 
 CONFIG = {
     "evaluation_mode": "lazy",

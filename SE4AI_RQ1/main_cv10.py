@@ -1,4 +1,4 @@
-from experiment_runner import run_selected_models
+from experiment_runner_ML import run_selected_models
 
 CONFIG = {
     "evaluation_mode": "cv10",

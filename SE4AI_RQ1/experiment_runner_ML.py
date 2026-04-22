@@ -1,5 +1,5 @@
 from preprocessing.clean_data import clean_dataset
-from preprocessing.feature_extraction import extract_features
+from preprocessing.feature_extraction_ML import extract_features
 from models.cross_validate import cross_validate_10fold
 from models.split import compute_holdout_metrics
 

@@ -1,0 +1,26 @@
+from experiment_runner_DL import run_selected_models
+
+CONFIG = {
+    "evaluation_mode": "holdout",
+
+    "selected_models": [
+        "mlp_features",
+        "textcnn",
+    ],
+
+    "train_path": "data/dataset_SENSY2.0.json",
+    "test_path": "data/dataset_SQUARE.json",
+
+    "random_state": 42,
+    "lazy_test_size": 0.2,
+
+    "report_dir": "samples/report",
+    "model_dir": "samples/models",
+    "errors_dir": "samples/errors",
+    "results_dir": "samples/results",
+
+    "experiment_tag": "dl_train_sensy2_test_square"
+}
+
+if __name__ == "__main__":
+    run_selected_models(CONFIG)
