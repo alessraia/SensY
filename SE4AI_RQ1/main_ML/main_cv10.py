@@ -1,4 +1,4 @@
-from experiment_runner_ML import run_selected_models
+from SE4AI_RQ1.experiment_runner_ML import run_selected_models
 
 CONFIG = {
     "evaluation_mode": "cv10",
@@ -20,7 +20,7 @@ CONFIG = {
     "random_state": 42,
     "lazy_test_size": 0.2,
 
-    "report_dir": "samples/report",
+    "report_dir": "samples/report/ML/cv10",
     "model_dir": "samples/models",
     "errors_dir": "samples/errors",
     "results_dir": "samples/results",
