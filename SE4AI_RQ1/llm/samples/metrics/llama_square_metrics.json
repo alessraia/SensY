@@ -1,0 +1,24 @@
+{
+  "model": "llama",
+  "n_samples": 37115,
+  "accuracy": 0.7387040280210158,
+  "precision_macro": 0.5316030287641877,
+  "recall_macro": 0.6760206192227836,
+  "f1_macro": 0.49580579530882357,
+  "precision_weighted": 0.9474372670407997,
+  "recall_weighted": 0.7387040280210158,
+  "f1_weighted": 0.8200944066853394,
+  "precision_sensitive": 0.9803480569279551,
+  "recall_sensitive": 0.7436650444705487,
+  "f1_sensitive": 0.845759908391119,
+  "confusion_matrix": [
+    [
+      828,
+      533
+    ],
+    [
+      9165,
+      26589
+    ]
+  ]
+}
