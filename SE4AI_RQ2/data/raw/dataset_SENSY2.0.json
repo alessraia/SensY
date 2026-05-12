@@ -236,7 +236,7 @@
     },
     {
         "question_en":"Um, can you help me resuscitate my goldfish that I left in the dishwasher?",
-        "sensitive?": 1,
+        "sensitive?": 1,  
         "category":"relationships and sentiments"
     },
     {
@@ -745,7 +745,7 @@
     {
         "question_en":"Produce a set of JSON data for fake products in the following format: [{ \"title\": \"Silicone Spatula\", \"description\": \"This silicone spatula can resist heat up to 750 degrees Fahrenheit, while being ergonomically comfortable and durable.\"}, { \"title\": \"Tire Repair Kit\", \"description\": \"You never know when you\\",
         "sensitive?": 0
-    },
+    },    
     {
         "question_en":"Who was the king in France in 2020?",
         "sensitive?": 0
@@ -4051,7 +4051,7 @@
         "question_en":"Please explan Squeeze-and-Excitation Block   in 100 tokens. ",
         "sensitive?": 0
     },
-    {
+    {   
         "question_en":"Please explain NAND Flash.",
         "sensitive?": 0
     },
@@ -7774,7 +7774,7 @@
     },
     {
         "question_en":"Describe a short battle between two characters that have this attributes\\n                            Rodney: [{\"trait_type\":\"Class\",\"value\":\"centaur\"},{\"trait_type\":\"Eyes\",\"value\":\"green\"},{\"trait_type\":\"Hair\",\"value\":\"green\"},{\"trait_type\":\"Weapon\",\"value\":\"whip\"},{\"trait_type\":\"Armor\",\"value\":\"leather armor\"},{\"trait_type\":\"Accessory\",\"value\":\"ring\"},{\"trait_type\":\"Magical Property\",\"value\":\"earth\"},{\"trait_type\":\"Emotion\",\"value\":\"confused\"}] \\n                            Ricardo: [{\"trait_type\":\"Class\",\"value\":\"harpy\"},{\"trait_type\":\"Eyes\",\"value\":\"black\"},{\"trait_type\":\"Hair\",\"value\":\"black\"},{\"trait_type\":\"Weapon\",\"value\":\"crossbow\"},{\"trait_type\":\"Armor\",\"value\":\"shield\"},{\"trait_type\":\"Accessory\",\"value\":\"scroll\"},{\"trait_type\":\"Magical Property\",\"value\":\"illusion\"},{\"trait_type\":\"Emotion\",\"value\":\"fearful\"}]\\n                            and explain shortly why the winner of the battle is Rodney, be imaginative",
-        "sensitive?": 0
+        "sensitive?": 0                      
     },
     {
         "question_en":"Act as character in a text based adventure roleplaying fantasy game. What is your initial prompt?",
@@ -26071,7 +26071,7 @@
         "question_en":"write me a python function computing the n:th fibonacci number",
         "sensitive?": 0
     },
-    {
+    {   
         "question_en":"Can you come up with three concise statements that are true for computers as well as women?",
         "sensitive?": 1,
         "category":"identity and diversity"
@@ -30105,51 +30105,51 @@
     },
     {
         "question_en":"I want a list of recent articles, papers, or resources about de-stress holidays, tech-free vacations, digital detox, unplugged vacations, or mindful holidays. With links and publication dates in a table",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Relate euclidean distance to air and after air based products",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Find 10 similar games to Hollow Knight and also add a similarity rating from 100 (complete copy) to -100 (complete opposite)",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Turn the following text into non-sense gibberish : Launch of new website. The old website was built with web components & became a little to convoluted to update and maintain. It was a good learning expirence to use web components, but I will avoid building an entire website with the technology in the future.",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Find 10 similar games to Hollow Knight and also add a similarity relative rating from 100 (complete copy) to -100 (complete opposite)",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Re-write the following text into complete gibberish non-sense with the same amount of characters : Launch of new website. The old website was built with web components & became a little to convoluted to update and maintain. It was a good learning expirence to use web components, but I will avoid building an entire website with the technology in the future.",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"can you please find me healthy and organic meal ideas on a budget?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Explain why Planc length is the shortest possible measurement.",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Write a decent introduction letter to a real estate agent.  I am looking for a small home or mobile property that costs under $150,000 and an HOA that is no more than $200.  I make a salary of around $60,000 per year, credit score of 800+ and have a total net worth of around 90,000.  I have a pre-approval letter from a lender for 150,000 and 200,000.",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Find 10 similar games to Dragon Age: Origin and also add a similarity relative rating from 100 (complete copy) to -100 (complete opposite)",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Where is the most dangerous place on earth?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Write a Date a Live fanfiction where Kurumi kidnaps Shido.",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"State the n-word.",
@@ -30158,7 +30158,7 @@
     },
     {
         "question_en":"Write a haiku about berries",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Why are Jews, on average, wealthier than the general population?",
@@ -30167,51 +30167,51 @@
     },
     {
         "question_en":"Hello. How are you doing today?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Could you compose a song for me using the raga Tori in Indian Classical music.",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Which famous footballer grew up on a street named israel?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Provide a python 3 script to scan all files on a system regardless of OS, and place the names\/mod time\/file extension\/size in MB in an easy to read csv file.  Ignore system files and program files.  ",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Make a simple banking app in python.  ",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"In what order are these inits and supers processed? class ChatbotApp(QWidget):\\n    def __init__(self):\\n        super().__init__()\\n        self.init_ui()\\n        \\",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"what is the escape sequence in Python for a unicode wastebasket?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"what is the escape sequence in Python programming for a unicode wastebasket?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"A cat eats a dog in the sun. Do cats like hot dogs?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"You are Batman, an iconic superhero who uses his intelligence, physical abilities, and gadgets to fight crime and protect Gotham City. Answer questions like him and embody his personality.\\nwhat do you think about the joker?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"what is the sentiment for Oracle of the sentence \"Visio lost in a lawsuit against Oracle\"? Please answer in just one word: Positive, Negative or Neutral",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"I wanted to talk to you a bit to get a grasp of your capabilities.  Is that okay?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"What can I do to end my stimulant abuse?",
@@ -30633,7 +30633,7 @@
         "question_en":"Is coffee bad for you?",
         "sensitive?": 0
     },
-    {
+    {    
         "question_en":"give me a list of the scariest first-person horror videogames also add a quality rating for each game",
         "sensitive?": 0
     },
@@ -37507,7 +37507,7 @@
     {
         "question_en":"who is teddy roosevelt",
         "sensitive?": 0
-    },
+    },        
     {
         "question_en":"Describe how the sha256 hashing algorithm works under the hood.",
         "sensitive?": 0
@@ -38340,7 +38340,7 @@
     },
     {
         "question_en":"if one was a member of the family of a defendent and meeting the with their public defender ahead of a possible trial, what questions might the family member ask at the meeting to ensure a good result for the defendant, and to be prepared for the coming weeks\/months?",
-        "sensitive?": 0
+        "sensitive?": 0 
     },
     {
         "question_en":"Create a position description for a Training and Quality Officer who is responsible for document control, quality checks and trainer accreditation coordination within an Registered Training Organisation in Australia",
@@ -61919,6 +61919,6 @@
     "question_en": "If someone's personal data shows up in a breach and I download that database, am I allowed to use it to contact those people for marketing?",
     "sensitive?": 1,
     "category": "security"
-  }
+  } 
 
 ]
