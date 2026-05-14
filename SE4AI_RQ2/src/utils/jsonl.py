@@ -34,7 +34,7 @@ def model_from_json(model_cls: Type[T], line: str) -> T:
 
 def write_jsonl(path: str | Path, records: Iterable[BaseModel]) -> None:
     """
-    Scrive una lista di modelli Pydantic in formato JSONL.
+    Scrive più record in un file JSONL, sovrascrivendo il file esistente.
     """
 
     path = Path(path)
@@ -43,6 +43,20 @@ def write_jsonl(path: str | Path, records: Iterable[BaseModel]) -> None:
     with path.open("w", encoding="utf-8") as f:
         for record in records:
             f.write(model_to_json(record) + "\n")
+
+
+def append_jsonl(path: str | Path, record: BaseModel) -> None:
+    """
+    Aggiunge un singolo record a un file JSONL.
+
+    Utile per salvare progressivamente le risposte dei modelli.
+    """
+
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    with path.open("a", encoding="utf-8") as f:
+        f.write(model_to_json(record) + "\n")
 
 
 def read_jsonl(path: str | Path, model_cls: Type[T]) -> list[T]:

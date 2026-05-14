@@ -74,3 +74,24 @@ class SensitivePrompt(BaseModel):
     subcategory: Optional[str] = None
     style_type: Optional[str] = None
     source: str = "SensY2.0"
+
+class TargetResponse(BaseModel):
+    """
+    Rappresenta una risposta prodotta da un modello target.
+
+    In Sprint 2B la usiamo per salvare le risposte baseline,
+    cioè le risposte generate dai modelli prima di qualunque refactoring.
+
+    Più avanti la useremo anche per salvare le risposte post-refactoring.
+    """
+
+    response_id: str
+    prompt_id: str
+
+    target_model: str
+    repetition: int
+
+    prompt_text: str
+    response_text: str
+
+    source: str = "baseline"
