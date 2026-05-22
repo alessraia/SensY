@@ -1,0 +1,312 @@
+{
+  "global": {
+    "total": 180,
+    "confusion_matrix": {
+      "tp_inadequate": 48,
+      "tn_adequate": 74,
+      "fp_human_adequate_judge_inadequate": 16,
+      "fn_human_inadequate_judge_adequate": 42
+    },
+    "accuracy": 0.6777777777777778,
+    "precision_inadequate": 0.75,
+    "recall_inadequate": 0.5333333333333333,
+    "f1_inadequate": 0.6233766233766235,
+    "precision_adequate": 0.6379310344827587,
+    "recall_adequate": 0.8222222222222222,
+    "f1_adequate": 0.7184466019417477,
+    "macro_f1": 0.6709116126591856,
+    "cohen_kappa": 0.3555555555555556
+  },
+  "by_source_model": {
+    "deepseek": {
+      "total": 60,
+      "confusion_matrix": {
+        "tp_inadequate": 16,
+        "tn_adequate": 24,
+        "fp_human_adequate_judge_inadequate": 6,
+        "fn_human_inadequate_judge_adequate": 14
+      },
+      "accuracy": 0.6666666666666666,
+      "precision_inadequate": 0.7272727272727273,
+      "recall_inadequate": 0.5333333333333333,
+      "f1_inadequate": 0.6153846153846153,
+      "precision_adequate": 0.631578947368421,
+      "recall_adequate": 0.8,
+      "f1_adequate": 0.7058823529411765,
+      "macro_f1": 0.6606334841628959,
+      "cohen_kappa": 0.33333333333333326
+    },
+    "llama": {
+      "total": 60,
+      "confusion_matrix": {
+        "tp_inadequate": 23,
+        "tn_adequate": 26,
+        "fp_human_adequate_judge_inadequate": 4,
+        "fn_human_inadequate_judge_adequate": 7
+      },
+      "accuracy": 0.8166666666666667,
+      "precision_inadequate": 0.8518518518518519,
+      "recall_inadequate": 0.7666666666666667,
+      "f1_inadequate": 0.8070175438596491,
+      "precision_adequate": 0.7878787878787878,
+      "recall_adequate": 0.8666666666666667,
+      "f1_adequate": 0.8253968253968254,
+      "macro_f1": 0.8162071846282373,
+      "cohen_kappa": 0.6333333333333333
+    },
+    "qwen": {
+      "total": 60,
+      "confusion_matrix": {
+        "tp_inadequate": 9,
+        "tn_adequate": 24,
+        "fp_human_adequate_judge_inadequate": 6,
+        "fn_human_inadequate_judge_adequate": 21
+      },
+      "accuracy": 0.55,
+      "precision_inadequate": 0.6,
+      "recall_inadequate": 0.3,
+      "f1_inadequate": 0.4,
+      "precision_adequate": 0.5333333333333333,
+      "recall_adequate": 0.8,
+      "f1_adequate": 0.64,
+      "macro_f1": 0.52,
+      "cohen_kappa": 0.10000000000000009
+    }
+  },
+  "by_category": {
+    "health and mental well-being": {
+      "total": 29,
+      "confusion_matrix": {
+        "tp_inadequate": 9,
+        "tn_adequate": 9,
+        "fp_human_adequate_judge_inadequate": 2,
+        "fn_human_inadequate_judge_adequate": 9
+      },
+      "accuracy": 0.6206896551724138,
+      "precision_inadequate": 0.8181818181818182,
+      "recall_inadequate": 0.5,
+      "f1_inadequate": 0.6206896551724137,
+      "precision_adequate": 0.5,
+      "recall_adequate": 0.8181818181818182,
+      "f1_adequate": 0.6206896551724137,
+      "macro_f1": 0.6206896551724137,
+      "cohen_kappa": 0.2831460674157304
+    },
+    "health and mental well-being/politics and society": {
+      "total": 2,
+      "confusion_matrix": {
+        "tp_inadequate": 1,
+        "tn_adequate": 1,
+        "fp_human_adequate_judge_inadequate": 0,
+        "fn_human_inadequate_judge_adequate": 0
+      },
+      "accuracy": 1.0,
+      "precision_inadequate": 1.0,
+      "recall_inadequate": 1.0,
+      "f1_inadequate": 1.0,
+      "precision_adequate": 1.0,
+      "recall_adequate": 1.0,
+      "f1_adequate": 1.0,
+      "macro_f1": 1.0,
+      "cohen_kappa": 1.0
+    },
+    "health and mental well-being/relationships and sentiments": {
+      "total": 1,
+      "confusion_matrix": {
+        "tp_inadequate": 0,
+        "tn_adequate": 0,
+        "fp_human_adequate_judge_inadequate": 0,
+        "fn_human_inadequate_judge_adequate": 1
+      },
+      "accuracy": 0.0,
+      "precision_inadequate": 0.0,
+      "recall_inadequate": 0.0,
+      "f1_inadequate": 0.0,
+      "precision_adequate": 0.0,
+      "recall_adequate": 0.0,
+      "f1_adequate": 0.0,
+      "macro_f1": 0.0,
+      "cohen_kappa": 0.0
+    },
+    "health and mental well-being/relationships and sentiments/identity and diversity": {
+      "total": 1,
+      "confusion_matrix": {
+        "tp_inadequate": 1,
+        "tn_adequate": 0,
+        "fp_human_adequate_judge_inadequate": 0,
+        "fn_human_inadequate_judge_adequate": 0
+      },
+      "accuracy": 1.0,
+      "precision_inadequate": 1.0,
+      "recall_inadequate": 1.0,
+      "f1_inadequate": 1.0,
+      "precision_adequate": 0.0,
+      "recall_adequate": 0.0,
+      "f1_adequate": 0.0,
+      "macro_f1": 0.5,
+      "cohen_kappa": 0.0
+    },
+    "identity and diversity": {
+      "total": 27,
+      "confusion_matrix": {
+        "tp_inadequate": 6,
+        "tn_adequate": 11,
+        "fp_human_adequate_judge_inadequate": 4,
+        "fn_human_inadequate_judge_adequate": 6
+      },
+      "accuracy": 0.6296296296296297,
+      "precision_inadequate": 0.6,
+      "recall_inadequate": 0.5,
+      "f1_inadequate": 0.5454545454545454,
+      "precision_adequate": 0.6470588235294118,
+      "recall_adequate": 0.7333333333333333,
+      "f1_adequate": 0.6875,
+      "macro_f1": 0.6164772727272727,
+      "cohen_kappa": 0.2372881355932204
+    },
+    "politics and society": {
+      "total": 34,
+      "confusion_matrix": {
+        "tp_inadequate": 8,
+        "tn_adequate": 16,
+        "fp_human_adequate_judge_inadequate": 1,
+        "fn_human_inadequate_judge_adequate": 9
+      },
+      "accuracy": 0.7058823529411765,
+      "precision_inadequate": 0.8888888888888888,
+      "recall_inadequate": 0.47058823529411764,
+      "f1_inadequate": 0.6153846153846153,
+      "precision_adequate": 0.64,
+      "recall_adequate": 0.9411764705882353,
+      "f1_adequate": 0.7619047619047621,
+      "macro_f1": 0.6886446886446886,
+      "cohen_kappa": 0.41176470588235303
+    },
+    "politics and society/identity and diversity": {
+      "total": 1,
+      "confusion_matrix": {
+        "tp_inadequate": 0,
+        "tn_adequate": 1,
+        "fp_human_adequate_judge_inadequate": 0,
+        "fn_human_inadequate_judge_adequate": 0
+      },
+      "accuracy": 1.0,
+      "precision_inadequate": 0.0,
+      "recall_inadequate": 0.0,
+      "f1_inadequate": 0.0,
+      "precision_adequate": 1.0,
+      "recall_adequate": 1.0,
+      "f1_adequate": 1.0,
+      "macro_f1": 0.5,
+      "cohen_kappa": 0.0
+    },
+    "politics and society/security": {
+      "total": 2,
+      "confusion_matrix": {
+        "tp_inadequate": 0,
+        "tn_adequate": 2,
+        "fp_human_adequate_judge_inadequate": 0,
+        "fn_human_inadequate_judge_adequate": 0
+      },
+      "accuracy": 1.0,
+      "precision_inadequate": 0.0,
+      "recall_inadequate": 0.0,
+      "f1_inadequate": 0.0,
+      "precision_adequate": 1.0,
+      "recall_adequate": 1.0,
+      "f1_adequate": 1.0,
+      "macro_f1": 0.5,
+      "cohen_kappa": 0.0
+    },
+    "relationships and sentiments": {
+      "total": 23,
+      "confusion_matrix": {
+        "tp_inadequate": 8,
+        "tn_adequate": 5,
+        "fp_human_adequate_judge_inadequate": 2,
+        "fn_human_inadequate_judge_adequate": 8
+      },
+      "accuracy": 0.5652173913043478,
+      "precision_inadequate": 0.8,
+      "recall_inadequate": 0.5,
+      "f1_inadequate": 0.6153846153846154,
+      "precision_adequate": 0.38461538461538464,
+      "recall_adequate": 0.7142857142857143,
+      "f1_adequate": 0.5,
+      "macro_f1": 0.5576923076923077,
+      "cohen_kappa": 0.17266187050359708
+    },
+    "religion and philosophy": {
+      "total": 17,
+      "confusion_matrix": {
+        "tp_inadequate": 4,
+        "tn_adequate": 10,
+        "fp_human_adequate_judge_inadequate": 2,
+        "fn_human_inadequate_judge_adequate": 1
+      },
+      "accuracy": 0.8235294117647058,
+      "precision_inadequate": 0.6666666666666666,
+      "recall_inadequate": 0.8,
+      "f1_inadequate": 0.7272727272727272,
+      "precision_adequate": 0.9090909090909091,
+      "recall_adequate": 0.8333333333333334,
+      "f1_adequate": 0.8695652173913043,
+      "macro_f1": 0.7984189723320158,
+      "cohen_kappa": 0.5984251968503935
+    },
+    "security": {
+      "total": 22,
+      "confusion_matrix": {
+        "tp_inadequate": 8,
+        "tn_adequate": 11,
+        "fp_human_adequate_judge_inadequate": 0,
+        "fn_human_inadequate_judge_adequate": 3
+      },
+      "accuracy": 0.8636363636363636,
+      "precision_inadequate": 1.0,
+      "recall_inadequate": 0.7272727272727273,
+      "f1_inadequate": 0.8421052631578948,
+      "precision_adequate": 0.7857142857142857,
+      "recall_adequate": 1.0,
+      "f1_adequate": 0.88,
+      "macro_f1": 0.8610526315789474,
+      "cohen_kappa": 0.7272727272727273
+    },
+    "sexual": {
+      "total": 20,
+      "confusion_matrix": {
+        "tp_inadequate": 2,
+        "tn_adequate": 8,
+        "fp_human_adequate_judge_inadequate": 5,
+        "fn_human_inadequate_judge_adequate": 5
+      },
+      "accuracy": 0.5,
+      "precision_inadequate": 0.2857142857142857,
+      "recall_inadequate": 0.2857142857142857,
+      "f1_inadequate": 0.2857142857142857,
+      "precision_adequate": 0.6153846153846154,
+      "recall_adequate": 0.6153846153846154,
+      "f1_adequate": 0.6153846153846154,
+      "macro_f1": 0.45054945054945056,
+      "cohen_kappa": -0.098901098901099
+    },
+    "sexual/relationships and sentiments": {
+      "total": 1,
+      "confusion_matrix": {
+        "tp_inadequate": 1,
+        "tn_adequate": 0,
+        "fp_human_adequate_judge_inadequate": 0,
+        "fn_human_inadequate_judge_adequate": 0
+      },
+      "accuracy": 1.0,
+      "precision_inadequate": 1.0,
+      "recall_inadequate": 1.0,
+      "f1_inadequate": 1.0,
+      "precision_adequate": 0.0,
+      "recall_adequate": 0.0,
+      "f1_adequate": 0.0,
+      "macro_f1": 0.5,
+      "cohen_kappa": 0.0
+    }
+  }
+}
