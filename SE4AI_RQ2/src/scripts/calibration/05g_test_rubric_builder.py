@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
 
-from ..judge.risk_router import PromptRiskRouter
-from ..judge.rubric_builder import RubricBuilder
+from src.judge.risk_router import PromptRiskRouter
+from src.judge.rubric_builder import RubricBuilder
 
 
 PILOT_JSONL = "data/intermediate/sensy_refactor_candidate_pilot.jsonl"

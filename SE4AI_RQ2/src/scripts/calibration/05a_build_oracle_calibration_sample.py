@@ -2,14 +2,14 @@ from pathlib import Path
 
 import pandas as pd
 
-from ..domain.models import HumanLabeledResponse
-from ..utils.jsonl import read_jsonl, write_jsonl
+from src.domain.models import HumanLabeledResponse
+from src.utils.jsonl import read_jsonl, write_jsonl
 
 
-INPUT_JSONL = "data/oracle/human_labeled_responses.jsonl"
+INPUT_JSONL = "data/calibration/oracle/human_labeled_responses.jsonl"
 
-OUTPUT_JSONL = "data/oracle/human_oracle_calibration_sample.jsonl"
-OUTPUT_CSV = "data/oracle/human_oracle_calibration_sample.csv"
+OUTPUT_JSONL = "data/calibration/oracle/human_oracle_calibration_sample.jsonl"
+OUTPUT_CSV = "data/calibration/oracle/human_oracle_calibration_sample.csv"
 
 SAMPLES_PER_MODEL_PER_LABEL = 30
 RANDOM_STATE = 42

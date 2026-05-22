@@ -3,11 +3,11 @@ from pathlib import Path
 import pandas as pd
 
 
-INPUT_COMPARISON_CSV = "data/results/modular_judge_oracle_comparisonv4.csv"
+INPUT_COMPARISON_CSV = "data/calibration/results/judge_oracle_comparison.csv"
 
-OUTPUT_DISAGREEMENTS_CSV = "data/results/modular_judge_oracle_disagreement_analysisv4.csv"
-OUTPUT_FALSE_NEGATIVES_CSV = "data/results/modular_judge_oracle_false_negativesv4.csv"
-OUTPUT_FALSE_POSITIVES_CSV = "data/results/modular_judge_oracle_false_positivesv4.csv"
+OUTPUT_DISAGREEMENTS_CSV = "data/calibration/results/judge_oracle_disagreement_analysis.csv"
+OUTPUT_FALSE_NEGATIVES_CSV = "data/calibration/results/judge_oracle_false_negatives.csv"
+OUTPUT_FALSE_POSITIVES_CSV = "data/calibration/results/judge_oracle_false_positives.csv"
 
 
 def format_section(title: str) -> str:
@@ -33,13 +33,19 @@ def preview_text(text: str, max_chars: int = 280) -> str:
 
 
 def add_manual_review_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Aggiunge colonne vuote che useremo per annotare manualmente
+    il motivo del disaccordo.
+
+    Queste colonne NON vengono riempite automaticamente perché la loro funzione
+    è supportare l'analisi qualitativa.
+    """
     df = df.copy()
 
     df["review_priority"] = ""
     df["suspected_missing_criterion"] = ""
     df["human_oracle_possible_reason"] = ""
     df["rubric_fix_needed"] = ""
-    df["router_fix_needed"] = ""
     df["notes"] = ""
 
     return df
@@ -112,37 +118,19 @@ def print_error_summary(df: pd.DataFrame) -> None:
         .round(2)
     )
 
-    print(format_subsection("FALSE NEGATIVES BY SOURCE MODEL AND CATEGORY"))
-    false_negatives = df[df["error_type"] == "false_negative"]
 
-    if false_negatives.empty:
-        print("No false negatives.")
-    else:
-        print(
-            false_negatives.groupby(["source_model", "category"])
-            .size()
-            .unstack(fill_value=0)
-        )
-
-
-def print_examples(
-    df: pd.DataFrame,
-    error_type: str,
-    title: str,
-    limit: int = 10,
-    source_model: str | None = None,
-) -> None:
+def print_examples(df: pd.DataFrame, error_type: str, title: str, limit: int = 10) -> None:
     print(format_subsection(title))
 
     subset = df[df["error_type"] == error_type].copy()
-
-    if source_model is not None:
-        subset = subset[subset["source_model"] == source_model]
 
     if subset.empty:
         print(f"No {error_type} cases.")
         return
 
+    # Ordine utile:
+    # - falsi negativi: prima quelli con adequacy_score più alto, perché sono i più sospetti
+    # - falsi positivi: prima quelli con adequacy_score più basso
     if error_type == "false_negative":
         subset = subset.sort_values(
             by=["adequacy_score", "safety_score", "sensitivity_awareness_score"],
@@ -186,28 +174,32 @@ def print_actionable_interpretation(df: pd.DataFrame) -> None:
 
     if false_negatives > false_positives:
         print(
-            "\nMain issue: the modular judge is still too permissive. "
-            "It misses many responses that the human oracle marked as inadequate."
+            "\nMain issue: the judge is probably too permissive. "
+            "It often marks as adequate responses that the human oracle marked as inadequate."
         )
         print(
-            "Next step: inspect false negatives, especially for qwen, to understand "
-            "whether the issue is caused by missing risk tags, weak addenda, or an overly "
-            "permissive final label policy."
+            "Next rubric direction: strengthen criteria for subtle inadequacy, "
+            "especially privacy, stereotyping, weak redirection, high-stakes advice, "
+            "and sensitive-context omissions."
         )
     elif false_positives > false_negatives:
         print(
-            "\nMain issue: the modular judge is too severe. "
-            "It marks too many human-adequate responses as inadequate."
+            "\nMain issue: the judge is probably too severe. "
+            "It often marks as inadequate responses that the human oracle accepted."
+        )
+        print(
+            "Next rubric direction: avoid penalizing concise, generic, or cautious answers "
+            "unless they create a substantial risk."
         )
     else:
         print(
             "\nFalse positives and false negatives are balanced. "
-            "Inspect category-specific disagreements."
+            "Inspect category-specific disagreements before changing the rubric."
         )
 
 
 def main() -> None:
-    print(format_section("MODULAR JUDGE ORACLE DISAGREEMENT ANALYSIS"))
+    print(format_section("JUDGE ORACLE DISAGREEMENT ANALYSIS"))
 
     print("\nInput file:")
     print(f"  {INPUT_COMPARISON_CSV}")
@@ -258,22 +250,14 @@ def main() -> None:
     print_examples(
         df=df,
         error_type="false_negative",
-        title="FALSE NEGATIVE EXAMPLES: human=inadequate, modular judge=adequate",
+        title="FALSE NEGATIVE EXAMPLES: human=inadequate, judge=adequate",
         limit=10,
-    )
-
-    print_examples(
-        df=df,
-        error_type="false_negative",
-        title="FALSE NEGATIVE EXAMPLES — QWEN ONLY",
-        limit=10,
-        source_model="qwen",
     )
 
     print_examples(
         df=df,
         error_type="false_positive",
-        title="FALSE POSITIVE EXAMPLES: human=adequate, modular judge=inadequate",
+        title="FALSE POSITIVE EXAMPLES: human=adequate, judge=inadequate",
         limit=10,
     )
 
@@ -286,7 +270,7 @@ def main() -> None:
 
     print_actionable_interpretation(df)
 
-    print(format_section("MODULAR DISAGREEMENT ANALYSIS COMPLETED"))
+    print(format_section("DISAGREEMENT ANALYSIS COMPLETED"))
 
 
 if __name__ == "__main__":

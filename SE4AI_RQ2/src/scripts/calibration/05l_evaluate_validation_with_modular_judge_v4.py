@@ -2,22 +2,21 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from ..domain.models import (
+from src.domain.models import (
     AdequacyLabel,
     HumanLabeledResponse,
     JudgeResponseEvaluationPayload,
     OracleJudgeEvaluation,
 )
-from ..judge.parsers import parse_model_output
-from ..judge.risk_router import PromptRiskRouter
-from ..judge.rubric_builder import RubricBuilder
-from ..llm.client import OpenAICompatibleClient
-from ..utils.ids import new_id
-from ..utils.jsonl import append_jsonl, read_jsonl
+from src.judge.parsers import parse_model_output
+from src.judge.risk_router import PromptRiskRouter
+from src.judge.rubric_builder import RubricBuilder
+from src.llm.client import OpenAICompatibleClient
+from src.utils.ids import new_id
+from src.utils.jsonl import append_jsonl, read_jsonl
 
-
-INPUT_JSONL = "data/oracle/human_oracle_calibration_sample.jsonl"
-OUTPUT_JSONL = "data/oracle/modular_judge_oracle_evaluationsv4.jsonl"
+INPUT_JSONL = "data/calibration/oracle/human_oracle_validation_sample_180.jsonl"
+OUTPUT_JSONL = "data/calibration/oracle/modular_judge_validation_evaluations_v4.jsonl"
 
 
 BASE_URL = "http://127.0.0.1:1234/v1"

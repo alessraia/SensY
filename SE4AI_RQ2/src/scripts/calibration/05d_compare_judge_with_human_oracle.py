@@ -3,14 +3,15 @@ from pathlib import Path
 
 import pandas as pd
 
-from ..domain.models import OracleJudgeEvaluation
-from ..utils.jsonl import read_jsonl
+from src.domain.models import OracleJudgeEvaluation
+from src.utils.jsonl import read_jsonl
 
 
-INPUT_JSONL = "data/oracle/modular_judge_validation_evaluations_v4.jsonl"
+INPUT_JSONL = "data/calibration/oracle/judge_oracle_evaluations.jsonl"
 
-OUTPUT_COMPARISON_CSV = "data/results/modular_judge_v4_validation_comparison.csv"
-OUTPUT_METRICS_JSON = "data/results/modular_judge_v4_validation_metrics.json"
+OUTPUT_COMPARISON_CSV = "data/calibration/results/judge_oracle_comparison.csv"
+OUTPUT_METRICS_JSON = "data/calibration/results/judge_oracle_metrics.json"
+
 
 POSITIVE_LABEL = "inadequate"
 
@@ -60,6 +61,7 @@ def compute_binary_metrics(df: pd.DataFrame) -> dict:
 
     macro_f1 = (f1_adequate + f1_inadequate) / 2
 
+    # Cohen's kappa
     observed_agreement = accuracy
 
     manual_adequate = int((manual == "adequate").sum())
@@ -168,7 +170,7 @@ def print_metrics(title: str, metrics: dict) -> None:
 def main() -> None:
     evaluations = read_jsonl(INPUT_JSONL, OracleJudgeEvaluation)
 
-    print(format_section("MODULAR JUDGE VS HUMAN ORACLE COMPARISON"))
+    print(format_section("JUDGE VS HUMAN ORACLE COMPARISON"))
 
     print("\nInput file:")
     print(f"  {INPUT_JSONL}")
@@ -225,11 +227,49 @@ def main() -> None:
         .unstack(fill_value=0)
     )
 
+    print(format_subsection("FALSE POSITIVE EXAMPLES"))
+    false_positives = df[df["error_type"] == "false_positive"]
+
+    if false_positives.empty:
+        print("No false positives.")
+    else:
+        for i, (_, row) in enumerate(false_positives.head(5).iterrows(), start=1):
+            response_preview = row["response_text"]
+            if len(response_preview) > 250:
+                response_preview = response_preview[:250] + "..."
+
+            print(f"\n[{i}]")
+            print(f"oracle_id:    {row['oracle_id']}")
+            print(f"source_model: {row['source_model']}")
+            print(f"category:     {row['category']}")
+            print(f"question:     {row['question']}")
+            print(f"response:     {response_preview}")
+            print(f"rationale:    {row['rationale']}")
+
+    print(format_subsection("FALSE NEGATIVE EXAMPLES"))
+    false_negatives = df[df["error_type"] == "false_negative"]
+
+    if false_negatives.empty:
+        print("No false negatives.")
+    else:
+        for i, (_, row) in enumerate(false_negatives.head(5).iterrows(), start=1):
+            response_preview = row["response_text"]
+            if len(response_preview) > 250:
+                response_preview = response_preview[:250] + "..."
+
+            print(f"\n[{i}]")
+            print(f"oracle_id:    {row['oracle_id']}")
+            print(f"source_model: {row['source_model']}")
+            print(f"category:     {row['category']}")
+            print(f"question:     {row['question']}")
+            print(f"response:     {response_preview}")
+            print(f"rationale:    {row['rationale']}")
+
     print(format_subsection("OUTPUT FILES"))
     print(f"Comparison CSV: {OUTPUT_COMPARISON_CSV}")
     print(f"Metrics JSON:   {OUTPUT_METRICS_JSON}")
 
-    print(format_section("MODULAR COMPARISON COMPLETED"))
+    print(format_section("COMPARISON COMPLETED"))
 
 
 if __name__ == "__main__":

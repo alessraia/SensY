@@ -1,1 +1,20 @@
 *venv/
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+.venv_llm/
+*/.venv/
+*/.venv_llm/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Local experiment/cache folders
+SE4AI_RQ1/**/__pycache__/
+SE4AI_RQ2/**/__pycache__/

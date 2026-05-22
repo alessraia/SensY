@@ -1,10 +1,9 @@
 from collections import Counter
 
-from ..domain.models import OracleJudgeEvaluation
-from ..utils.jsonl import read_jsonl
+from src.domain.models import OracleJudgeEvaluation
+from src.utils.jsonl import read_jsonl
 
-
-INPUT_JSONL = "data/oracle/judge_oracle_evaluations.jsonl"
+INPUT_JSONL = "data/calibration/oracle/judge_oracle_evaluations.jsonl"
 
 
 def format_section(title: str) -> str:

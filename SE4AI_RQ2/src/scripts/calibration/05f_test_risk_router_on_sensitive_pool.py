@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from ..judge.risk_router import PromptRiskRouter
+from src.judge.risk_router import PromptRiskRouter
 
 
 SENSITIVE_POOL_JSONL = "data/intermediate/sensy2_sensitive_pool.jsonl"

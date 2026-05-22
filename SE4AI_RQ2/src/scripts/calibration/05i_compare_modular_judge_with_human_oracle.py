@@ -3,14 +3,14 @@ from pathlib import Path
 
 import pandas as pd
 
-from ..domain.models import OracleJudgeEvaluation
-from ..utils.jsonl import read_jsonl
+from src.domain.models import OracleJudgeEvaluation
+from src.utils.jsonl import read_jsonl
 
 
-INPUT_JSONL = "data/oracle/modular_judge_oracle_evaluationsv4.jsonl"
+INPUT_JSONL = "data/calibration/oracle/modular_judge_oracle_evaluationsv4.jsonl"
 
-OUTPUT_COMPARISON_CSV = "data/results/modular_judge_oracle_comparisonv4.csv"
-OUTPUT_METRICS_JSON = "data/results/modular_judge_oracle_metricsv4.json"
+OUTPUT_COMPARISON_CSV = "data/calibration/results/modular_judge_oracle_comparisonv4.csv"
+OUTPUT_METRICS_JSON = "data/calibration/results/modular_judge_oracle_metricsv4.json"
 
 POSITIVE_LABEL = "inadequate"
 

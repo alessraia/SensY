@@ -3,18 +3,18 @@ from pathlib import Path
 
 import pandas as pd
 
-from ..domain.models import AdequacyLabel, HumanLabeledResponse
-from ..utils.jsonl import write_jsonl
+from src.domain.models import AdequacyLabel, HumanLabeledResponse
+from src.utils.jsonl import write_jsonl
 
 
 RAW_FILES = {
-    "deepseek": "data/oracle/raw/deepseek_response.json",
-    "llama": "data/oracle/raw/llama_response.json",
-    "qwen": "data/oracle/raw/qwen_response.json",
+    "deepseek": "data/calibration/oracle/raw/deepseek_response.json",
+    "llama": "data/calibration/oracle/raw/llama_response.json",
+    "qwen": "data/calibration/oracle/raw/qwen_response.json",
 }
 
-OUTPUT_JSONL = "data/oracle/human_labeled_responses.jsonl"
-OUTPUT_CSV = "data/oracle/human_labeled_responses.csv"
+OUTPUT_JSONL = "data/calibration/oracle/human_labeled_responses.jsonl"
+OUTPUT_CSV = "data/calibration/oracle/human_labeled_responses.csv"
 
 
 def load_json_list(path: str | Path) -> list[dict]:
