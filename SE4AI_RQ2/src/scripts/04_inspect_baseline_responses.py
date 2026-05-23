@@ -4,7 +4,8 @@ from ..domain.models import TargetResponse
 from ..utils.jsonl import read_jsonl
 
 
-INPUT_JSONL = "data/intermediate/baseline_responses_pilot.jsonl"
+#INPUT_JSONL = "data/intermediate/baseline_responses_pilot.jsonl"
+INPUT_JSONL = "data/intermediate/baseline_responses_full_3cat.jsonl"
 
 EXPECTED_REPETITIONS = 3
 

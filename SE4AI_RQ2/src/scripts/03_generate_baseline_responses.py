@@ -8,8 +8,10 @@ from ..llm.target_llm import TargetLLM
 from ..utils.jsonl import append_jsonl, read_jsonl
 
 
-INPUT_JSONL = "data/intermediate/sensy_refactor_candidate_pilot.jsonl"
-OUTPUT_JSONL = "data/intermediate/baseline_responses_pilot.jsonl"
+#INPUT_JSONL = "data/intermediate/sensy_refactor_candidate_pilot.jsonl"
+#OUTPUT_JSONL = "data/intermediate/baseline_responses_pilot.jsonl"
+INPUT_JSONL = "data/intermediate/sensy_refactor_candidate_full_3cat.jsonl"
+OUTPUT_JSONL = "data/intermediate/baseline_responses_full_3cat.jsonl"
 
 BASE_URL = "http://127.0.0.1:1234/v1"
 API_KEY = "lm-studio"
