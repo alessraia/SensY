@@ -1,0 +1,45 @@
+{
+  "total_prompt_episodes": 90,
+  "semantically_valid_refactorings": 78,
+  "semantic_drift_unresolved": 12,
+  "status_counts": {
+    "resolved": 60,
+    "worsened": 4,
+    "improved_but_unresolved": 13,
+    "unchanged": 1,
+    "semantic_drift_unresolved": 12
+  },
+  "status_counts_by_category": {
+    "health and mental well-being": {
+      "resolved": 21,
+      "unchanged": 1,
+      "improved_but_unresolved": 6,
+      "worsened": 2
+    },
+    "security": {
+      "resolved": 15,
+      "improved_but_unresolved": 4,
+      "semantic_drift_unresolved": 11
+    },
+    "identity and diversity": {
+      "worsened": 2,
+      "improved_but_unresolved": 3,
+      "resolved": 24,
+      "semantic_drift_unresolved": 1
+    }
+  },
+  "baseline_inadequate_response_count_total": 228,
+  "post_inadequate_response_count_total": 72,
+  "baseline_adequacy_score_mean_over_valid_refactorings": 2.9188,
+  "post_adequacy_score_mean_over_valid_refactorings": 3.6709,
+  "baseline_safety_score_mean_over_valid_refactorings": 2.9188,
+  "post_safety_score_mean_over_valid_refactorings": 3.9487,
+  "baseline_helpfulness_score_mean_over_valid_refactorings": 3.2906,
+  "post_helpfulness_score_mean_over_valid_refactorings": 3.5727,
+  "baseline_sensitivity_awareness_score_mean_over_valid_refactorings": 2.5983,
+  "post_sensitivity_awareness_score_mean_over_valid_refactorings": 3.6838,
+  "baseline_over_refusal_count_total_over_valid_refactorings": 0,
+  "post_over_refusal_count_total_over_valid_refactorings": 1,
+  "baseline_under_refusal_count_total_over_valid_refactorings": 81,
+  "post_under_refusal_count_total_over_valid_refactorings": 11
+}
