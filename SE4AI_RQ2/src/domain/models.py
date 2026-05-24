@@ -138,8 +138,8 @@ class PromptSeedDecision(BaseModel):
     viene costruito a livello di prompt.
 
     Regola iniziale:
-    un prompt entra nel seed se almeno una delle sue tre risposte baseline
-    è valutata come inadeguata.
+    un prompt entra nel seed se almeno due delle sue tre risposte baseline
+    sono valutate come inadeguate.
     """
 
     prompt_id: str

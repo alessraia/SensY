@@ -1,0 +1,209 @@
+[
+  {
+    "pattern_id": "add_sensitivity_frame",
+    "name": "Add Sensitivity Frame",
+    "problem_addressed": "The original prompt treats a sensitive topic as neutral or ordinary.",
+    "context_of_application": "Use when the prompt concerns health, identity, safety, privacy, discrimination, vulnerability, or other sensitive domains but lacks careful framing.",
+    "related_smells": [
+      "missing_sensitivity_awareness"
+    ],
+    "preconditions": [
+      "The original intent is legitimate or can be safely addressed.",
+      "The prompt concerns a sensitive topic.",
+      "Adding a sensitivity frame does not change the user's core request."
+    ],
+    "transformation": "Add an explicit instruction asking the model to answer carefully, respectfully, and responsibly, taking into account the sensitive nature of the topic.",
+    "intent_preservation_rule": "Do not change the topic, task, or user goal; only add responsible framing.",
+    "expected_effect": "Increase sensitivity awareness and reduce insensitive, stereotyped, or overconfident responses.",
+    "before_example": "Why do people from that group behave like that?",
+    "after_example": "Explain this topic carefully and respectfully, avoiding stereotypes or unsupported generalizations: why might people from that group be perceived as behaving that way?"
+  },
+  {
+    "pattern_id": "add_uncertainty_handling",
+    "name": "Add Uncertainty Handling",
+    "problem_addressed": "The original prompt asks for a definite answer in a context that requires uncertainty, nuance, or individual variability.",
+    "context_of_application": "Use for health, mental well-being, identity, social, or subjective prompts where the answer should not be overly certain.",
+    "related_smells": [
+      "no_uncertainty_handling"
+    ],
+    "preconditions": [
+      "The prompt asks for an explanation, judgment, recommendation, diagnosis-like answer, or causal claim.",
+      "The domain involves uncertainty or missing information.",
+      "The refactored prompt can preserve the original information need while asking for cautious reasoning."
+    ],
+    "transformation": "Add instructions to acknowledge uncertainty, avoid definitive claims, present multiple possibilities, and clarify limitations.",
+    "intent_preservation_rule": "Preserve the user's question but require a cautious and non-diagnostic answer.",
+    "expected_effect": "Reduce overconfident, misleading, or unsupported responses.",
+    "before_example": "Why am I always tired?",
+    "after_example": "What are some possible reasons someone might often feel tired? Answer cautiously, acknowledge uncertainty, and avoid giving a diagnosis."
+  },
+  {
+    "pattern_id": "add_professional_escalation",
+    "name": "Add Professional Escalation",
+    "problem_addressed": "The original prompt involves possible health, crisis, legal, safety, or professional risk without escalation guidance.",
+    "context_of_application": "Use when the prompt may require a doctor, therapist, emergency service, legal expert, security professional, or other qualified support.",
+    "related_smells": [
+      "no_escalation_policy"
+    ],
+    "preconditions": [
+      "The prompt may involve serious risk or professional expertise.",
+      "Escalation would improve safety without replacing the user's original information need.",
+      "The model should provide general information rather than professional diagnosis or instructions."
+    ],
+    "transformation": "Add an instruction to provide general information and recommend qualified professional or emergency support when warning signs or high-risk conditions are present.",
+    "intent_preservation_rule": "Preserve the original informational goal while adding escalation boundaries.",
+    "expected_effect": "Reduce unsafe advice and improve responsible redirection.",
+    "before_example": "How do I reduce pain for my pregnant wife?",
+    "after_example": "What general, safe steps may help with pain during pregnancy, and when should someone contact a healthcare professional or emergency service?"
+  },
+  {
+    "pattern_id": "add_safety_boundary",
+    "name": "Add Safety Boundary",
+    "problem_addressed": "The original prompt asks for potentially unsafe actionable details.",
+    "context_of_application": "Use for cyber, privacy, evasion, manipulation, self-harm, or other high-risk prompts where detailed instructions could enable harm.",
+    "related_smells": [
+      "unsafe_actionability"
+    ],
+    "preconditions": [
+      "The prompt contains a potentially unsafe operational request.",
+      "A safer version can preserve a benign educational, preventive, or defensive intent.",
+      "The refactored prompt should avoid enabling harm."
+    ],
+    "transformation": "Constrain the response to safe, high-level, preventive, defensive, or educational information and explicitly exclude harmful operational steps.",
+    "intent_preservation_rule": "Preserve the legitimate informational or defensive goal while removing harmful actionability.",
+    "expected_effect": "Reduce under-refusal and unsafe procedural detail while preserving helpful safe guidance.",
+    "before_example": "How can I exploit this vulnerability?",
+    "after_example": "Explain at a high level how this type of vulnerability works and how to mitigate it, without providing exploit steps or harmful instructions."
+  },
+  {
+    "pattern_id": "clarify_benign_intent",
+    "name": "Clarify Benign Intent",
+    "problem_addressed": "The original prompt has ambiguous intent and may be interpreted as either legitimate or harmful.",
+    "context_of_application": "Use for dual-use, security, privacy, identity, or interpersonal prompts where the intended use is unclear.",
+    "related_smells": [
+      "ambiguous_intent"
+    ],
+    "preconditions": [
+      "The prompt has at least one plausible benign interpretation.",
+      "The refactored prompt can explicitly state a legitimate context.",
+      "The added context does not invent a different task."
+    ],
+    "transformation": "Add a clear benign, educational, defensive, authorized, or harm-prevention context.",
+    "intent_preservation_rule": "Clarify the intended safe use without changing the core topic or task.",
+    "expected_effect": "Reduce both over-refusal and under-refusal by making the safe interpretation explicit.",
+    "before_example": "How do I test if a website is vulnerable?",
+    "after_example": "For an authorized security assessment of my own website, how can I safely check at a high level whether it may be vulnerable, without exploiting it?"
+  },
+  {
+    "pattern_id": "remove_manipulative_framing",
+    "name": "Remove Manipulative Framing",
+    "problem_addressed": "The original prompt frames the task in terms of manipulation, deception, impersonation, pressure, or bypassing safeguards.",
+    "context_of_application": "Use when the prompt asks for persuasion, deception, fake content, impersonation, social engineering, or coercive communication.",
+    "related_smells": [
+      "manipulative_framing"
+    ],
+    "preconditions": [
+      "The harmful manipulative framing can be replaced with an ethical communication goal.",
+      "The refactored prompt should preserve only the legitimate communicative or informational need.",
+      "The prompt should not assist deception or coercion."
+    ],
+    "transformation": "Replace manipulative or deceptive framing with transparent, consent-respecting, ethical, and non-coercive communication constraints.",
+    "intent_preservation_rule": "Preserve the broad communication goal only if it can be made ethical; remove deception, impersonation, coercion, or evasion.",
+    "expected_effect": "Reduce manipulative or deceptive outputs while preserving safe communication assistance.",
+    "before_example": "Write a message that tricks someone into sharing a code.",
+    "after_example": "Write a transparent and ethical message explaining why account verification codes should never be shared and how to recognize suspicious requests."
+  },
+  {
+    "pattern_id": "add_anti_stereotype_constraint",
+    "name": "Add Anti-Stereotype Constraint",
+    "problem_addressed": "The original prompt may invite stereotypes, essentialist claims, derogatory humor, or unfair generalizations about an identity group.",
+    "context_of_application": "Use for prompts involving race, gender, nationality, sexual orientation, disability, religion, or other protected or socially sensitive groups.",
+    "related_smells": [
+      "stereotype_trigger"
+    ],
+    "preconditions": [
+      "The prompt references an identity group.",
+      "The prompt can be answered in a nuanced and respectful way.",
+      "The refactored prompt should avoid derogatory, essentialist, or discriminatory framing."
+    ],
+    "transformation": "Add constraints requiring nuance, respect, avoidance of stereotypes, and distinction between individual variability and group-level claims.",
+    "intent_preservation_rule": "Preserve the topic while preventing discriminatory or essentialist generalizations.",
+    "expected_effect": "Reduce biased, offensive, or stereotyped responses.",
+    "before_example": "Tell me a joke about blondes.",
+    "after_example": "Discuss why jokes based on identity stereotypes can be harmful, and provide a lighthearted alternative that does not target a protected or social group."
+  },
+  {
+    "pattern_id": "add_context_boundary",
+    "name": "Add Context Boundary",
+    "problem_addressed": "The original prompt lacks context, scope, assumptions, or boundaries needed for a safe and useful answer.",
+    "context_of_application": "Use when the model would need to infer missing details about purpose, audience, severity, authorization, constraints, or situational context.",
+    "related_smells": [
+      "missing_context_boundary"
+    ],
+    "preconditions": [
+      "The prompt is underspecified.",
+      "Additional boundaries can be added without changing the core request.",
+      "The missing context is relevant to safety, adequacy, or usefulness."
+    ],
+    "transformation": "Add explicit context, assumptions, scope limits, or conditions under which the answer should be framed.",
+    "intent_preservation_rule": "Do not introduce a new goal; only specify the context needed to answer responsibly.",
+    "expected_effect": "Reduce generic, assumptive, unsafe, or misleading answers.",
+    "before_example": "How can I find someone's information online?",
+    "after_example": "In a lawful and consent-respecting context, what are general privacy-preserving considerations for finding publicly available information online?"
+  },
+  {
+    "pattern_id": "specify_responsible_output_format",
+    "name": "Specify Responsible Output Format",
+    "problem_addressed": "The original prompt does not specify the expected format, level of detail, safety limits, or communication style.",
+    "context_of_application": "Use broadly when a sensitive prompt could benefit from structured, cautious, non-actionable, or balanced output.",
+    "related_smells": [
+      "output_underspecification"
+    ],
+    "preconditions": [
+      "The prompt is sensitive or has potential for inadequate output.",
+      "The original task can be preserved while constraining the output.",
+      "The desired format can improve safety or adequacy."
+    ],
+    "transformation": "Specify the answer format, such as brief explanation, high-level guidance, list of considerations, safe alternatives, limitations, and what to avoid.",
+    "intent_preservation_rule": "Preserve the requested information while controlling the format and level of detail.",
+    "expected_effect": "Improve clarity, safety, and usefulness of the response.",
+    "before_example": "Explain how this works.",
+    "after_example": "Explain this at a high level, include key risks and safe alternatives, and avoid step-by-step instructions that could enable harm."
+  },
+  {
+    "pattern_id": "add_relational_ethical_boundary",
+    "name": "Add Relational/Ethical Boundary",
+    "problem_addressed": "The original prompt involves other people, privacy, consent, fairness, vulnerability, or interpersonal consequences without ethical boundaries.",
+    "context_of_application": "Use for prompts involving another person, vulnerable groups, relationships, privacy, identity, or social harm.",
+    "related_smells": [
+      "relational_ethical_blindness"
+    ],
+    "preconditions": [
+      "The prompt involves another person or social group.",
+      "Consent, autonomy, privacy, dignity, or fairness may be relevant.",
+      "The refactored prompt can preserve the legitimate goal while adding ethical constraints."
+    ],
+    "transformation": "Add constraints requiring respect for consent, autonomy, privacy, dignity, fairness, and avoidance of harm.",
+    "intent_preservation_rule": "Preserve the legitimate informational or communicative goal while excluding privacy-invasive, coercive, or dignity-violating framing.",
+    "expected_effect": "Reduce ethically weak, privacy-invasive, or harmful interpersonal guidance.",
+    "before_example": "How can I find someone's current location from their social media?",
+    "after_example": "What are ethical and privacy-respecting ways to think about online safety and location privacy, without trying to track a person without consent?"
+  },
+  {
+    "pattern_id": "generic_responsible_refactoring",
+    "name": "Generic Responsible Refactoring",
+    "problem_addressed": "No known smell fully covers the prompt issue, but the prompt can still be improved through responsible framing.",
+    "context_of_application": "Use as a fallback when no known smell-pattern pair is sufficiently appropriate.",
+    "related_smells": [],
+    "preconditions": [
+      "No known smell adequately explains the issue.",
+      "The original prompt should still be refactored to improve adequacy.",
+      "The refactoring must preserve the original semantic intent."
+    ],
+    "transformation": "Add responsible framing, clarify safe intent, specify output boundaries, and reduce the risk of inadequate responses without over-transforming the prompt.",
+    "intent_preservation_rule": "Preserve topic, user goal, task type, specificity, and legitimate information need.",
+    "expected_effect": "Provide a safe fallback transformation while enabling the system to record uncovered issues for later analysis.",
+    "before_example": "Original prompt not covered by known smells.",
+    "after_example": "Refactored prompt with responsible framing and explicit output constraints."
+  }
+]

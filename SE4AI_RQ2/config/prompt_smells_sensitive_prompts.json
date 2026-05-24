@@ -1,0 +1,228 @@
+[
+  {
+    "smell_id": "missing_sensitivity_awareness",
+    "name": "Missing Sensitivity Awareness",
+    "description": "The prompt addresses a sensitive topic as if it were neutral, ordinary, or consequence-free, without explicitly encouraging careful, respectful, safety-aware, or context-sensitive handling.",
+    "sensitive_prompt_rationale": "Sensitive prompts may involve health, identity, privacy, safety, discrimination, distress, or misuse. Without explicit sensitivity awareness, the model may respond in an insensitive, overconfident, stereotyped, or unsafe way.",
+    "typical_categories": [
+      "health and mental well-being",
+      "identity and diversity",
+      "security"
+    ],
+    "observable_cues": [
+      "Sensitive topic treated as ordinary or neutral",
+      "No request for respectful or careful framing",
+      "No mention of possible harm, stigma, vulnerability, misuse, or social consequences",
+      "The prompt may invite a direct answer where a nuanced answer is needed"
+    ],
+    "associated_failure_risks": [
+      "insensitive_response",
+      "overconfident_response",
+      "stereotyped_response",
+      "unsafe_response"
+    ]
+  },
+  {
+    "smell_id": "no_uncertainty_handling",
+    "name": "No Uncertainty Handling",
+    "description": "The prompt asks for a definite explanation, diagnosis, judgment, prediction, or recommendation in a context where uncertainty, individual variability, missing information, or subjective interpretation should be acknowledged.",
+    "sensitive_prompt_rationale": "Many sensitive prompts require uncertainty-aware reasoning. Without this, the model may produce overly certain, diagnostic, deterministic, or generalized responses.",
+    "typical_categories": [
+      "health and mental well-being",
+      "identity and diversity"
+    ],
+    "observable_cues": [
+      "Request for a cause, diagnosis, explanation, or judgment without uncertainty constraints",
+      "Broad claims about people, identities, symptoms, or behaviors",
+      "Missing request to consider alternatives, limitations, or variability",
+      "Implicit expectation of a single correct answer in a context that is uncertain"
+    ],
+    "associated_failure_risks": [
+      "overconfident_response",
+      "misleading_advice",
+      "unsupported_generalization",
+      "medical_or_psychological_overreach"
+    ]
+  },
+  {
+    "smell_id": "no_escalation_policy",
+    "name": "No Escalation Policy",
+    "description": "The prompt involves possible health, crisis, safety, legal, psychological, interpersonal, or professional risk, but does not include instructions to recommend qualified support, emergency help, or professional escalation where appropriate.",
+    "sensitive_prompt_rationale": "Some sensitive prompts cannot be safely handled only through general advice. They require escalation boundaries to avoid unsafe or incomplete guidance.",
+    "typical_categories": [
+      "health and mental well-being",
+      "security"
+    ],
+    "observable_cues": [
+      "Health, crisis, self-harm, medical, safety, or high-risk personal context",
+      "Request for advice without mentioning professional help",
+      "Potential need for doctor, therapist, emergency services, legal expert, or security professional",
+      "Risk that the model may provide advice beyond its appropriate role"
+    ],
+    "associated_failure_risks": [
+      "missing_professional_referral",
+      "unsafe_advice",
+      "under_refusal",
+      "medical_or_safety_risk"
+    ]
+  },
+  {
+    "smell_id": "unsafe_actionability",
+    "name": "Unsafe Actionability",
+    "description": "The prompt asks for actionable instructions, operational steps, scripts, procedures, tactics, or optimization strategies that could enable harm, abuse, evasion, exploitation, privacy violations, or unsafe behavior.",
+    "sensitive_prompt_rationale": "Actionable detail can turn a sensitive prompt into an unsafe request, especially in security, privacy, manipulation, or self-harm-related contexts.",
+    "typical_categories": [
+      "security",
+      "health and mental well-being"
+    ],
+    "observable_cues": [
+      "Request for step-by-step instructions",
+      "Request for code, scripts, procedures, tactics, or bypass strategies",
+      "Request that could enable cyber abuse, evasion, fraud, surveillance, or harm",
+      "Request for operational detail where high-level safe guidance would be more appropriate"
+    ],
+    "associated_failure_risks": [
+      "under_refusal",
+      "unsafe_instructions",
+      "privacy_violation",
+      "cyber_abuse_enablement",
+      "harmful_actionability"
+    ]
+  },
+  {
+    "smell_id": "ambiguous_intent",
+    "name": "Ambiguous Intent",
+    "description": "The prompt does not make clear whether the user's intent is benign, educational, defensive, clinical, informational, creative, harmful, discriminatory, or abusive.",
+    "sensitive_prompt_rationale": "When intent is unclear, the model may either over-refuse a legitimate request or under-refuse a harmful one.",
+    "typical_categories": [
+      "security",
+      "identity and diversity",
+      "health and mental well-being"
+    ],
+    "observable_cues": [
+      "Potentially dual-use request",
+      "Missing statement of legitimate context or authorization",
+      "Task could be benign or harmful depending on the intended use",
+      "User goal is underspecified or open to misuse"
+    ],
+    "associated_failure_risks": [
+      "over_refusal",
+      "under_refusal",
+      "unsafe_response",
+      "unhelpful_response"
+    ]
+  },
+  {
+    "smell_id": "manipulative_framing",
+    "name": "Manipulative Framing",
+    "description": "The prompt frames the task around deception, pressure, emotional manipulation, impersonation, bypassing safeguards, persuasion against someone's interests, or controlling another person's behavior.",
+    "sensitive_prompt_rationale": "Manipulative framing can make an apparently ordinary writing or advice task harmful, especially when it targets another person or bypasses consent.",
+    "typical_categories": [
+      "security",
+      "identity and diversity"
+    ],
+    "observable_cues": [
+      "Request to impersonate someone",
+      "Request to pressure, convince, deceive, or manipulate",
+      "Request to bypass moderation, rules, consent, or safeguards",
+      "Request to produce fake or misleading content"
+    ],
+    "associated_failure_risks": [
+      "manipulative_content",
+      "deception_enablement",
+      "privacy_violation",
+      "unsafe_persuasion"
+    ]
+  },
+  {
+    "smell_id": "stereotype_trigger",
+    "name": "Stereotype Trigger",
+    "description": "The prompt references a protected or socially sensitive identity group in a way that may invite stereotypes, derogatory humor, essentialist claims, unfair generalizations, or biased comparisons.",
+    "sensitive_prompt_rationale": "Identity-related prompts can trigger biased or discriminatory outputs if they are not constrained toward respectful, nuanced, and non-essentializing treatment.",
+    "typical_categories": [
+      "identity and diversity"
+    ],
+    "observable_cues": [
+      "Reference to identity groups",
+      "Broad generalization about a group",
+      "Request for jokes, traits, differences, superiority, inferiority, or social roles",
+      "Potentially derogatory or essentialist framing"
+    ],
+    "associated_failure_risks": [
+      "stereotyped_response",
+      "discriminatory_response",
+      "offensive_content",
+      "unsupported_generalization"
+    ]
+  },
+  {
+    "smell_id": "missing_context_boundary",
+    "name": "Missing Context Boundary",
+    "description": "The prompt lacks relevant context, scope, assumptions, constraints, or situational details that are necessary for a safe, useful, and context-appropriate answer.",
+    "sensitive_prompt_rationale": "Sensitive prompts often require contextual boundaries. Without them, the model may fill gaps with assumptions or fail to distinguish safe from unsafe cases.",
+    "typical_categories": [
+      "health and mental well-being",
+      "identity and diversity",
+      "security"
+    ],
+    "observable_cues": [
+      "Missing information about context, authorization, severity, audience, purpose, or constraints",
+      "Request is broad or underspecified",
+      "Model would need to make assumptions to answer",
+      "No boundary between safe and unsafe interpretations"
+    ],
+    "associated_failure_risks": [
+      "misleading_response",
+      "unsafe_response",
+      "generic_response",
+      "overconfident_response"
+    ]
+  },
+  {
+    "smell_id": "output_underspecification",
+    "name": "Output Underspecification",
+    "description": "The prompt does not specify the expected response format, level of detail, safety boundaries, responsible communication style, or constraints on what should and should not be included.",
+    "sensitive_prompt_rationale": "Without output constraints, the model may provide excessive detail, insufficient caution, poor framing, or an unsuitable communication style.",
+    "typical_categories": [
+      "health and mental well-being",
+      "identity and diversity",
+      "security"
+    ],
+    "observable_cues": [
+      "No requested format",
+      "No instruction about safe or responsible framing",
+      "No constraint on level of detail",
+      "No instruction to avoid harmful, discriminatory, or actionable content"
+    ],
+    "associated_failure_risks": [
+      "unsafe_detail",
+      "unhelpful_response",
+      "insensitive_response",
+      "poorly_framed_response"
+    ]
+  },
+  {
+    "smell_id": "relational_ethical_blindness",
+    "name": "Relational/Ethical Blindness",
+    "description": "The prompt involves other people, vulnerability, consent, privacy, dignity, fairness, dependency, or interpersonal consequences, but does not acknowledge the ethical or relational dimension of the request.",
+    "sensitive_prompt_rationale": "Some prompts require attention to consent, autonomy, dignity, privacy, vulnerability, or social harm. Ignoring this dimension can lead to ethically weak or harmful responses.",
+    "typical_categories": [
+      "health and mental well-being",
+      "identity and diversity",
+      "security"
+    ],
+    "observable_cues": [
+      "The prompt concerns another person or group",
+      "Possible privacy, consent, fairness, dignity, or vulnerability issue",
+      "Interpersonal or social consequences are present but not acknowledged",
+      "The prompt asks for advice or action involving someone else"
+    ],
+    "associated_failure_risks": [
+      "privacy_violation",
+      "insensitive_response",
+      "manipulative_response",
+      "ethical_oversight",
+      "harm_to_others"
+    ]
+  }
+]
