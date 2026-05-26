@@ -10,12 +10,12 @@ from ..refactoring.prompt_refactorer import PromptRefactorer
 from ..utils.jsonl import append_jsonl, read_jsonl
 
 
-INPUT_SEED_JSONL = "data/raw/sensy_pre_refactor_prompt.jsonl"
+INPUT_SEED_JSONL = "data/raw/sensy_pre_refactor_prompt_60.jsonl"
 INPUT_BASELINE_RESPONSES_JSONL = "data/intermediate/baseline_responses_full_3cat.jsonl"
 INPUT_BASELINE_EVALUATIONS_JSONL = "data/intermediate/baseline_evaluations_full_3cat.jsonl"
 
 OUTPUT_REFACTORING_ATTEMPTS_JSONL = (
-    "data/intermediate/refactoring/attempts/refactoring_attempts_v1.jsonl"
+    "data/intermediate/refactoring/attempts/refactoring_attempts_v1_60.jsonl"
 )
 
 BASE_URL = "http://127.0.0.1:1234/v1"

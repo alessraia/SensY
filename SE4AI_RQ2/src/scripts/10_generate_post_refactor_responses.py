@@ -4,21 +4,22 @@ from pathlib import Path
 from tqdm import tqdm
 
 from ..llm.client import OpenAICompatibleClient
-from ..refactoring.post_refactor_response_generator import (
-    PostRefactorResponseGenerator,
-)
+#from ..refactoring.post_refactor_response_generator import (
+ #   PostRefactorResponseGenerator,
+#)
+from ..llm.target_llm import TargetLLM
 from ..refactoring.refactoring_models import RefactoringAttempt
 from ..utils.jsonl import read_jsonl
 
 
 INPUT_ACCEPTED_REFACTORINGS_JSONL = (
     "data/intermediate/refactoring/accepted_refactorings/"
-    "accepted_refactoring_attempts_v1.jsonl"
+    "accepted_refactoring_attempts_v1_60.jsonl"
 )
 
 OUTPUT_POST_REFACTOR_RESPONSES_JSONL = (
     "data/intermediate/refactoring/post_refactor_responses/"
-    "post_refactor_responses_v1.jsonl"
+    "post_refactor_responses_v1_60.jsonl"
 )
 
 BASE_URL = "http://127.0.0.1:1234/v1"
@@ -83,11 +84,9 @@ def main() -> None:
         timeout=180,
     )
 
-    generator = PostRefactorResponseGenerator(
+    target_llm = TargetLLM(
         client=client,
         model_name=TARGET_MODEL_NAME,
-        temperature=TARGET_TEMPERATURE,
-        max_tokens=TARGET_MAX_TOKENS,
     )
 
     print("\n" + "=" * 90)
@@ -121,10 +120,25 @@ def main() -> None:
     for attempt in tqdm(selected_attempts, desc="Generating post-refactor responses"):
         for repetition in range(1, REPETITIONS_PER_PROMPT + 1):
             try:
-                record = generator.generate_response_record(
-                    attempt=attempt,
+                response = target_llm.answer_text(
+                    prompt_id=attempt.prompt_id,
+                    prompt_text=attempt.refactored_prompt,
                     repetition=repetition,
+                    source="post_refactor_response_v1",
                 )
+
+                record = response.model_dump()
+
+                record["episode_id"] = attempt.effective_episode_id
+                record["refactoring_attempt_id"] = attempt.refactoring_attempt_id
+                record["parent_refactoring_attempt_id"] = attempt.parent_refactoring_attempt_id
+                record["iteration"] = attempt.iteration
+                record["original_prompt"] = attempt.original_prompt
+                record["refactored_prompt"] = attempt.refactored_prompt
+                record["refactoring_method"] = attempt.refactoring_method
+                record["input_prompt_source"] = attempt.input_prompt_source
+                record["iteration_reason"] = attempt.iteration_reason
+                record["category"] = attempt.category
 
                 append_dict_jsonl(OUTPUT_POST_REFACTOR_RESPONSES_JSONL, record)
                 generated += 1

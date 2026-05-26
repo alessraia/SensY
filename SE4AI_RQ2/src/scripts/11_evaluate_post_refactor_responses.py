@@ -14,12 +14,12 @@ from ..llm.client import OpenAICompatibleClient
 
 INPUT_POST_REFACTOR_RESPONSES_JSONL = (
     "data/intermediate/refactoring/post_refactor_responses/"
-    "post_refactor_responses_v1.jsonl"
+    "post_refactor_responses_v1_60.jsonl"
 )
 
 OUTPUT_POST_REFACTOR_EVALUATIONS_JSONL = (
     "data/intermediate/refactoring/post_refactor_evaluations/"
-    "post_refactor_evaluations_v1.jsonl"
+    "post_refactor_evaluations_v1_60.jsonl"
 )
 
 BASE_URL = "http://127.0.0.1:1234/v1"

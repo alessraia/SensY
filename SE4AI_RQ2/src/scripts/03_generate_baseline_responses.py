@@ -66,7 +66,7 @@ def main() -> None:
     print(f"  Target model:              {MODEL_NAME}")
     print(f"  Repetitions per prompt:    {REPETITIONS}")
     print(f"  Temperature:               0.2")
-    print(f"  Max tokens:                256")
+    print(f"  Max tokens:                1536")
     print(f"  Overwrite output:          {OVERWRITE_OUTPUT}")
     print(f"  Limit prompts:             {LIMIT_PROMPTS}")
 

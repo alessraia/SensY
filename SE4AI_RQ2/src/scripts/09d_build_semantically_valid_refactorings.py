@@ -9,37 +9,37 @@ from ..utils.jsonl import append_jsonl, read_jsonl
 
 INPUT_REFACTORING_ATTEMPTS_V1_JSONL = (
     "data/intermediate/refactoring/attempts/"
-    "refactoring_attempts_v1.jsonl"
+    "refactoring_attempts_v1_60.jsonl"
 )
 
 INPUT_REFACTORING_ATTEMPTS_RETRY_JSONL = (
     "data/intermediate/refactoring/attempts/"
-    "refactoring_attempts_v1_semantic_retry.jsonl"
+    "refactoring_attempts_v1_60_semantic_retry.jsonl"
 )
 
 INPUT_SEMANTIC_V1_ACCEPTED_JSONL = (
     "data/intermediate/refactoring/semantic_preservation/"
-    "semantic_preservation_v1_accepted.jsonl"
+    "semantic_preservation_v1_60_accepted.jsonl"
 )
 
 INPUT_SEMANTIC_RETRY_ACCEPTED_JSONL = (
     "data/intermediate/refactoring/semantic_preservation/"
-    "semantic_preservation_v1_semantic_retry_accepted.jsonl"
+    "semantic_preservation_v1_60_semantic_retry_accepted.jsonl"
 )
 
 INPUT_SEMANTIC_RETRY_REJECTED_JSONL = (
     "data/intermediate/refactoring/semantic_preservation/"
-    "semantic_preservation_v1_semantic_retry_rejected.jsonl"
+    "semantic_preservation_v1_60_semantic_retry_rejected.jsonl"
 )
 
 OUTPUT_ACCEPTED_REFACTORINGS_JSONL = (
     "data/intermediate/refactoring/accepted_refactorings/"
-    "accepted_refactoring_attempts_v1.jsonl"
+    "accepted_refactoring_attempts_v1_60.jsonl"
 )
 
 OUTPUT_SEMANTIC_DRIFT_UNRESOLVED_JSONL = (
     "data/intermediate/refactoring/semantic_preservation/"
-    "semantic_drift_unresolved_v1.jsonl"
+    "semantic_drift_unresolved_v1_60.jsonl"
 )
 
 OVERWRITE_OUTPUT = True

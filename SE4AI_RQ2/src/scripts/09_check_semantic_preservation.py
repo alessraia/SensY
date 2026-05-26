@@ -8,19 +8,19 @@ def main() -> None:
     config = SemanticPreservationRunConfig(
         input_refactoring_attempts_jsonl=(
             "data/intermediate/refactoring/attempts/"
-            "refactoring_attempts_v1.jsonl"
+            "refactoring_attempts_v1_60.jsonl"
         ),
         output_all_jsonl=(
             "data/intermediate/refactoring/semantic_preservation/"
-            "semantic_preservation_v1.jsonl"
+            "semantic_preservation_v1_60.jsonl"
         ),
         output_accepted_jsonl=(
             "data/intermediate/refactoring/semantic_preservation/"
-            "semantic_preservation_v1_accepted.jsonl"
+            "semantic_preservation_v1_60_accepted.jsonl"
         ),
         output_rejected_jsonl=(
             "data/intermediate/refactoring/semantic_preservation/"
-            "semantic_preservation_v1_rejected.jsonl"
+            "semantic_preservation_v1_60_rejected.jsonl"
         ),
         evaluator_model_name="qwen/qwen3-14b",
         base_url="http://127.0.0.1:1234/v1",

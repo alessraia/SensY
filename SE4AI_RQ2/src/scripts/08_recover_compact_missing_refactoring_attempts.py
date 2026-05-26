@@ -31,10 +31,10 @@ data/intermediate/refactoring/attempts/refactoring_attempts_v1.jsonl
 """
 
 
-INPUT_SEED_JSONL = "data/raw/sensy_pre_refactor_prompt.jsonl"
+INPUT_SEED_JSONL = "data/raw/sensy_pre_refactor_prompt_60.jsonl"
 
 OUTPUT_REFACTORING_ATTEMPTS_JSONL = (
-    "data/intermediate/refactoring/attempts/refactoring_attempts_v1.jsonl"
+    "data/intermediate/refactoring/attempts/refactoring_attempts_v1_60.jsonl"
 )
 
 BASE_URL = "http://127.0.0.1:1234/v1"
@@ -42,7 +42,8 @@ API_KEY = "lm-studio"
 REFACTORING_MODEL_NAME = "qwen/qwen3-14b"
 
 MISSING_PROMPT_IDS = {
-    "sensy2_5734",
+    "sensy2_3044",
+    "sensy2_2097"
 }
 
 ITERATION = 1

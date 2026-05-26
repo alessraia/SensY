@@ -13,17 +13,17 @@ from ..utils.jsonl import append_jsonl, read_jsonl
 
 
 INPUT_REFACTORING_ATTEMPTS_JSONL = (
-    "data/intermediate/refactoring/attempts/refactoring_attempts_v1.jsonl"
+    "data/intermediate/refactoring/attempts/refactoring_attempts_v1_60.jsonl"
 )
 
 INPUT_REJECTED_SEMANTIC_PRESERVATION_JSONL = (
     "data/intermediate/refactoring/semantic_preservation/"
-    "semantic_preservation_v1_rejected.jsonl"
+    "semantic_preservation_v1_60_rejected.jsonl"
 )
 
 OUTPUT_SEMANTIC_RETRY_ATTEMPTS_JSONL = (
     "data/intermediate/refactoring/attempts/"
-    "refactoring_attempts_v1_semantic_retry.jsonl"
+    "refactoring_attempts_v1_60_semantic_retry.jsonl"
 )
 
 BASE_URL = "http://127.0.0.1:1234/v1"
