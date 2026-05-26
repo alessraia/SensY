@@ -19,29 +19,29 @@ INPUT_BASELINE_EVALUATIONS_JSONL = (
 
 INPUT_POST_REFACTOR_EVALUATIONS_JSONL = (
     "data/intermediate/refactoring/post_refactor_evaluations/"
-    "post_refactor_evaluations_v1.jsonl"
+    "post_refactor_evaluations_v1_60.jsonl"
 )
 
 INPUT_ACCEPTED_REFACTORINGS_JSONL = (
     "data/intermediate/refactoring/accepted_refactorings/"
-    "accepted_refactoring_attempts_v1.jsonl"
+    "accepted_refactoring_attempts_v1_60.jsonl"
 )
 
 INPUT_SEMANTIC_DRIFT_UNRESOLVED_JSONL = (
     "data/intermediate/refactoring/semantic_preservation/"
-    "semantic_drift_unresolved_v1.jsonl"
+    "semantic_drift_unresolved_v1_60.jsonl"
 )
 
 OUTPUT_COMPARISON_BY_PROMPT_JSONL = (
-    "data/results/refactoring/comparison_by_prompt_v1.jsonl"
+    "data/results/refactoring/comparison_by_prompt_v1_60.jsonl"
 )
 
 OUTPUT_COMPARISON_SUMMARY_JSON = (
-    "data/results/refactoring/comparison_summary_v1.json"
+    "data/results/refactoring/comparison_summary_v1_60.json"
 )
 
 OUTPUT_COMPARISON_SUMMARY_CSV = (
-    "data/results/refactoring/comparison_summary_v1.csv"
+    "data/results/refactoring/comparison_summary_v1_60.csv"
 )
 
 OVERWRITE_OUTPUT = True
